@@ -13,14 +13,16 @@
 		766C44D1269783720027FBC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 766C44D0269783720027FBC2 /* Assets.xcassets */; };
 		766C44D4269783720027FBC2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 766C44D3269783720027FBC2 /* Preview Assets.xcassets */; };
 		766C44D7269783720027FBC2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 766C44D5269783720027FBC2 /* LaunchScreen.storyboard */; };
-		766C44E02697841C0027FBC2 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766C44DF2697841C0027FBC2 /* WebService.swift */; };
+		766C44E02697841C0027FBC2 /* WebServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766C44DF2697841C0027FBC2 /* WebServices.swift */; };
 		766C44E3269784530027FBC2 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766C44E2269784530027FBC2 /* Post.swift */; };
 		766C450D2697BB5D0027FBC2 /* PostListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766C450C2697BB5D0027FBC2 /* PostListVM.swift */; };
 		76A043FB2698C13F00DD4AC1 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A043FA2698C13F00DD4AC1 /* HomeScreen.swift */; };
 		76A043FD2698C15300DD4AC1 /* ProfileScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A043FC2698C15300DD4AC1 /* ProfileScreen.swift */; };
 		76A043FF2698C16500DD4AC1 /* NewPostScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A043FE2698C16500DD4AC1 /* NewPostScreen.swift */; };
 		76A044012698C17800DD4AC1 /* ViewPostScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A044002698C17800DD4AC1 /* ViewPostScreen.swift */; };
-		76A044032698D5A600DD4AC1 /* ViewPostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A044022698D5A600DD4AC1 /* ViewPostService.swift */; };
+		76D9CAA12699E2B500DEEA08 /* SpecificPostVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D9CAA02699E2B500DEEA08 /* SpecificPostVM.swift */; };
+		76D9CAA5269CDCE500DEEA08 /* LoadCommentsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D9CAA4269CDCE500DEEA08 /* LoadCommentsVM.swift */; };
+		76D9CAA7269CE1D700DEEA08 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D9CAA6269CE1D700DEEA08 /* Comment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,14 +34,16 @@
 		766C44D3269783720027FBC2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		766C44D6269783720027FBC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		766C44D8269783720027FBC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		766C44DF2697841C0027FBC2 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		766C44DF2697841C0027FBC2 /* WebServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServices.swift; sourceTree = "<group>"; };
 		766C44E2269784530027FBC2 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		766C450C2697BB5D0027FBC2 /* PostListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListVM.swift; sourceTree = "<group>"; };
 		76A043FA2698C13F00DD4AC1 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		76A043FC2698C15300DD4AC1 /* ProfileScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScreen.swift; sourceTree = "<group>"; };
 		76A043FE2698C16500DD4AC1 /* NewPostScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostScreen.swift; sourceTree = "<group>"; };
 		76A044002698C17800DD4AC1 /* ViewPostScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPostScreen.swift; sourceTree = "<group>"; };
-		76A044022698D5A600DD4AC1 /* ViewPostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPostService.swift; sourceTree = "<group>"; };
+		76D9CAA02699E2B500DEEA08 /* SpecificPostVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecificPostVM.swift; sourceTree = "<group>"; };
+		76D9CAA4269CDCE500DEEA08 /* LoadCommentsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadCommentsVM.swift; sourceTree = "<group>"; };
+		76D9CAA6269CE1D700DEEA08 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,8 +102,7 @@
 		766C44DE269783D70027FBC2 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				766C44DF2697841C0027FBC2 /* WebService.swift */,
-				76A044022698D5A600DD4AC1 /* ViewPostService.swift */,
+				766C44DF2697841C0027FBC2 /* WebServices.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -108,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				766C44E2269784530027FBC2 /* Post.swift */,
+				76D9CAA6269CE1D700DEEA08 /* Comment.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -116,6 +120,8 @@
 			isa = PBXGroup;
 			children = (
 				766C450C2697BB5D0027FBC2 /* PostListVM.swift */,
+				76D9CAA02699E2B500DEEA08 /* SpecificPostVM.swift */,
+				76D9CAA4269CDCE500DEEA08 /* LoadCommentsVM.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -204,11 +210,13 @@
 				76A044012698C17800DD4AC1 /* ViewPostScreen.swift in Sources */,
 				76A043FF2698C16500DD4AC1 /* NewPostScreen.swift in Sources */,
 				766C44CB269783700027FBC2 /* AppDelegate.swift in Sources */,
-				76A044032698D5A600DD4AC1 /* ViewPostService.swift in Sources */,
+				76D9CAA5269CDCE500DEEA08 /* LoadCommentsVM.swift in Sources */,
+				76D9CAA12699E2B500DEEA08 /* SpecificPostVM.swift in Sources */,
 				766C44CD269783700027FBC2 /* SceneDelegate.swift in Sources */,
 				76A043FB2698C13F00DD4AC1 /* HomeScreen.swift in Sources */,
 				766C450D2697BB5D0027FBC2 /* PostListVM.swift in Sources */,
-				766C44E02697841C0027FBC2 /* WebService.swift in Sources */,
+				76D9CAA7269CE1D700DEEA08 /* Comment.swift in Sources */,
+				766C44E02697841C0027FBC2 /* WebServices.swift in Sources */,
 				766C44CF269783700027FBC2 /* ContentView.swift in Sources */,
 				766C44E3269784530027FBC2 /* Post.swift in Sources */,
 				76A043FD2698C15300DD4AC1 /* ProfileScreen.swift in Sources */,

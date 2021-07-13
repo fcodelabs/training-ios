@@ -31,7 +31,7 @@ struct HomeView: View {
         NavigationView {
             List(self.model.posts,id: \.id ){ post in
                 NavigationLink(
-                    destination: ViewPostView(),
+                    destination: ViewPostView(id:post.id),
                     label: {
                         VStack {
                             Text(post.title).font(.title2)

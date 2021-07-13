@@ -14,7 +14,7 @@ class PostListVM: ObservableObject {
 
     init() {
         
-        WebService().getAllPosts { posts in
+        WebServices().getAllPosts { posts in
             self.posts = posts.map(PostViewModel.init)
             
             
@@ -23,6 +23,21 @@ class PostListVM: ObservableObject {
     
 
 }
+
+//class PostVM: ObservableObject {
+//    @Published var posts = [PostViewModel]()
+//
+//    init() {
+//
+//        WebServices().getSpecificPosts { posts in
+//            self.posts = posts.map(PostViewModel.init)
+//
+//
+//        }
+//    }
+//
+//
+//}
 struct PostViewModel {
     
     var post: Post
