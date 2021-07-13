@@ -11,7 +11,6 @@ class SpecificPostVM: ObservableObject {
     @Published var postVM: PostViewModel? = nil
     
     init(id: Int) {
-
         WebServices().getSpecificPost(id: id) { post in
             self.postVM = PostViewModel(post: post)
         }
@@ -25,8 +24,6 @@ class SpecificPostVM: ObservableObject {
 //    func abc(_ value: Post) {
 //        self.postVM = PostViewModel(post: value)
 //    }
-
-
 }
 
 
