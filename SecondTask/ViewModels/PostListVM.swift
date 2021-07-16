@@ -5,9 +5,9 @@
 //  Created by Kalana Rathnayaka on 2021-07-08.
 //
 
+import Combine
 import Foundation
 import SwiftUI
-import Combine
 
 class PostListVM: ObservableObject {
     @Published var posts = [PostViewModel]()
@@ -18,7 +18,7 @@ class PostListVM: ObservableObject {
             self.posts = posts.map(PostViewModel.init)
         }
     }
-    
+
     init(postId: Int) {
         WebServices().loadComments(postId: postId) { comments in
             self.commentsVM = comments.map(LoadCommentModel.init)
@@ -28,20 +28,21 @@ class PostListVM: ObservableObject {
 
 struct PostViewModel {
     var post: Post
-    
+
     init(post: Post) {
         self.post = post
     }
-    
+
     var id: Int {
-        return self.post.id
+        return post.id
     }
-    
+
     var title: String {
-        return self.post.title
+        return post.title
     }
+
     var body: String {
-        return self.post.body
+        return post.body
     }
 }
 
@@ -53,18 +54,18 @@ struct LoadCommentModel {
     }
 
     var postId: Int {
-        return self.comment.postId
+        return comment.postId
     }
-    
+
     var id: Int {
-        return self.comment.id
+        return comment.id
     }
 
     var name: String {
-        return self.comment.name
+        return comment.name
     }
-    
+
     var body: String {
-        return self.comment.body
+        return comment.body
     }
 }

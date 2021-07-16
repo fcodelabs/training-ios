@@ -9,14 +9,13 @@ import Foundation
 
 class WebServices {
     let baseUrl = "https://jsonplaceholder.typicode.com/posts/"
-    
-    func getAllPosts(completion: @escaping ([Post]) -> ()) {
-        
+
+    func getAllPosts(completion: @escaping ([Post]) -> Void) {
         guard let url = URL(string: baseUrl)
         else {
             fatalError("URL is not correct!")
         }
-        URLSession.shared.dataTask(with: url){ data, _, _ in
+        URLSession.shared.dataTask(with: url) { data, _, _ in
             let posts = try!
                 JSONDecoder().decode([Post].self, from: data!)
             DispatchQueue.main.async {
@@ -24,14 +23,13 @@ class WebServices {
             }
         }.resume()
     }
-    
-    func getSpecificPost(id: Int,completion: @escaping (Post) -> ()) {
 
+    func getSpecificPost(id: Int, completion: @escaping (Post) -> Void) {
         guard let url = URL(string: "\(baseUrl)\(id)")
         else {
             fatalError("URL is not correct!")
         }
-        URLSession.shared.dataTask(with: url){ data, _, _ in
+        URLSession.shared.dataTask(with: url) { data, _, _ in
             let post = try!
                 JSONDecoder().decode(Post.self, from: data!)
             DispatchQueue.main.async {
@@ -39,14 +37,13 @@ class WebServices {
             }
         }.resume()
     }
-    
-    func loadComments(postId:Int,completion: @escaping ([Comment]) -> ()) {
-        
+
+    func loadComments(postId: Int, completion: @escaping ([Comment]) -> Void) {
         guard let url = URL(string: "\(baseUrl)\(postId)/comments")
         else {
             fatalError("URL is not correct!")
         }
-        URLSession.shared.dataTask(with: url){ data, _, _ in
+        URLSession.shared.dataTask(with: url) { data, _, _ in
             let comments = try!
                 JSONDecoder().decode([Comment].self, from: data!)
             DispatchQueue.main.async {

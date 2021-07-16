@@ -14,10 +14,15 @@ struct ContentView: View {
                 Image(systemName: "house")
                 Text("Home")
             }
-            
+
             ProfileView().tabItem {
                 Image(systemName: "person")
                 Text("Profile")
+            }
+
+            SensorView(motionMagneto: MagnetoManager(), motionAccelero: AcceleroManager(), motionGyro: GyroManager()).tabItem {
+                Image(systemName: "person")
+                Text("Sensors")
             }
         }
     }
@@ -28,4 +33,3 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
-

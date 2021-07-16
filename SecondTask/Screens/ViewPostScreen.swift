@@ -13,52 +13,51 @@ struct ViewPostView: View {
     @StateObject var commentModel: PostListVM
 
     init(id: Int) {
-        self._model = StateObject(wrappedValue: SpecificPostVM(id: id))
-        self._commentModel = StateObject(wrappedValue: PostListVM(postId: id))
+        _model = StateObject(wrappedValue: SpecificPostVM(id: id))
+        _commentModel = StateObject(wrappedValue: PostListVM(postId: id))
     }
-    
+
     var body: some View {
-        if let post = self.model.postVM   {
+        if let post = self.model.postVM {
             VStack {
                 Text(post.title)
                     .font(.title2)
                     .fontWeight(.semibold)
                     .foregroundColor(Color.white)
                     .padding()
-                
+
                 Text(post.body)
                     .font(.body)
                     .foregroundColor(Color.white)
-                    .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+                    .padding(/*@START_MENU_TOKEN@*/ .all/*@END_MENU_TOKEN@*/)
 
                 Text("Comments")
                     .font(.title2)
                     .foregroundColor(Color.white)
                     .multilineTextAlignment(.leading)
-                
-                List(self.commentModel.commentsVM,id: \.id){ post in
+
+                List(self.commentModel.commentsVM, id: \.id) { post in
                     VStack {
                         Text(post.name)
                             .font(.title2)
                             .foregroundColor(Color.white)
                             .multilineTextAlignment(.leading)
-                        
+
                         Text(post.body)
                             .font(.body)
                             .foregroundColor(Color.white)
                             .multilineTextAlignment(.leading)
                     }
-                    .padding(/*@START_MENU_TOKEN@*/.all, 0.0/*@END_MENU_TOKEN@*/)
-                    .frame(width: 350.0)
+                    .padding(/*@START_MENU_TOKEN@*/ .all, 0.0/*@END_MENU_TOKEN@*/)
                     .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color.blue/*@END_MENU_TOKEN@*/)
                 }
             }
-            .padding(/*@START_MENU_TOKEN@*/.all, 0.0/*@END_MENU_TOKEN@*/)
+            .padding(/*@START_MENU_TOKEN@*/ .all, 0.0/*@END_MENU_TOKEN@*/)
             .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color.blue/*@END_MENU_TOKEN@*/)
         } else {
             Text("loading")
         }
-        
+
         //        if self.commentModel.commentsVM == nil {
         //            Text("loading")
         //        }else {
