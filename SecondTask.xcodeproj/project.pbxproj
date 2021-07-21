@@ -12,6 +12,7 @@
 		7600BFAC26A0C6420089B6A1 /* GyroVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7600BFAB26A0C6420089B6A1 /* GyroVM.swift */; };
 		765E0F3C269F7DC20037A9F2 /* SensorScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765E0F3B269F7DC20037A9F2 /* SensorScreen.swift */; };
 		765E0F3E269FAD140037A9F2 /* MotionManagerVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765E0F3D269FAD140037A9F2 /* MotionManagerVM.swift */; };
+		76604FB326A7D16600E25DBC /* SendSensorDataVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76604FB226A7D16600E25DBC /* SendSensorDataVM.swift */; };
 		766C44CB269783700027FBC2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766C44CA269783700027FBC2 /* AppDelegate.swift */; };
 		766C44CD269783700027FBC2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766C44CC269783700027FBC2 /* SceneDelegate.swift */; };
 		766C44CF269783700027FBC2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766C44CE269783700027FBC2 /* ContentView.swift */; };
@@ -36,6 +37,7 @@
 		7600BFAB26A0C6420089B6A1 /* GyroVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GyroVM.swift; sourceTree = "<group>"; };
 		765E0F3B269F7DC20037A9F2 /* SensorScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorScreen.swift; sourceTree = "<group>"; };
 		765E0F3D269FAD140037A9F2 /* MotionManagerVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionManagerVM.swift; sourceTree = "<group>"; };
+		76604FB226A7D16600E25DBC /* SendSensorDataVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendSensorDataVM.swift; sourceTree = "<group>"; };
 		766C44C7269783700027FBC2 /* SecondTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SecondTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		766C44CA269783700027FBC2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		766C44CC269783700027FBC2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 				765E0F3D269FAD140037A9F2 /* MotionManagerVM.swift */,
 				7600BFA926A0B4F80089B6A1 /* AcceseleroMeterVM.swift */,
 				7600BFAB26A0C6420089B6A1 /* GyroVM.swift */,
+				76604FB226A7D16600E25DBC /* SendSensorDataVM.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 				766C44CF269783700027FBC2 /* ContentView.swift in Sources */,
 				765E0F3C269F7DC20037A9F2 /* SensorScreen.swift in Sources */,
 				766C44E3269784530027FBC2 /* Post.swift in Sources */,
+				76604FB326A7D16600E25DBC /* SendSensorDataVM.swift in Sources */,
 				76A043FD2698C15300DD4AC1 /* ProfileScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -350,7 +354,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -405,7 +409,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -423,7 +427,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_ASSET_PATHS = "\"SecondTask/Preview Content\"";
 				DEVELOPMENT_TEAM = FVFUBDQ5L5;
 				ENABLE_PREVIEWS = YES;
@@ -449,7 +453,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_ASSET_PATHS = "\"SecondTask/Preview Content\"";
 				DEVELOPMENT_TEAM = FVFUBDQ5L5;
 				ENABLE_PREVIEWS = YES;

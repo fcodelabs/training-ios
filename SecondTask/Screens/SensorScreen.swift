@@ -26,13 +26,38 @@ struct SensorView: View {
                 Text("Y: \(motionAccelero.y)")
                 Text("Z: \(motionAccelero.z)")
 
-                Text("Gyro Data")
-                Text("X: \(motionGyro.x)")
-                Text("Y: \(motionGyro.y)")
-                Text("Z: \(motionGyro.z)")
+                Button(action: {
+                    WebServices().sendSensorData(acceleroDataX: "\(motionAccelero.x)",
+                                                 acceleroDataY: "\(motionAccelero.y)",
+                                                 acceleroDataZ: "\(motionAccelero.z)",
+                                                 magnetoDataX: "\(motionMagneto.x)",
+                                                 magnetoDataY: "\(motionMagneto.y)",
+                                                 magnetoDataZ: "\(motionMagneto.z)")
+                }, label: {
+                    Text("Button")
+                })
+
+//                Text("Gyro Data")
+//                Text("X: \(motionGyro.x)")
+//                Text("Y: \(motionGyro.y)")
+//                Text("Z: \(motionGyro.z)")
             }
         }
 
         .navigationTitle("Sensors")
     }
 }
+
+// func activeProximitySensor(_ enable: Bool) {
+//    let device = UIDevice.current
+//    device.isProximityMonitoringEnabled = enable
+//    if device.isBatteryMonitoringEnabled {
+//        NotificationCenter.default.addObserver(self, selector: #selector(proximityChange), name: UIDevice.proximityStateDidChangeNotification, object: device)
+//    }
+//
+// }
+// func proximityChange(_ notification: Notification) {
+//    if let device = notification.object as? UIDevice {
+//        print("\(device) detected")
+//    }
+// }
