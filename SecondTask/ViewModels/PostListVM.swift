@@ -11,17 +11,10 @@ import SwiftUI
 
 class PostListVM: ObservableObject {
     @Published var posts = [PostViewModel]()
-    @Published var commentsVM = [LoadCommentModel]()
 
     init() {
         WebServices().getAllPosts { posts in
             self.posts = posts.map(PostViewModel.init)
-        }
-    }
-
-    init(postId: Int) {
-        WebServices().loadComments(postId: postId) { comments in
-            self.commentsVM = comments.map(LoadCommentModel.init)
         }
     }
 }
@@ -43,29 +36,5 @@ struct PostViewModel {
 
     var body: String {
         return post.body
-    }
-}
-
-struct LoadCommentModel {
-    var comment: Comment
-
-    init(comment: Comment) {
-        self.comment = comment
-    }
-
-    var postId: Int {
-        return comment.postId
-    }
-
-    var id: Int {
-        return comment.id
-    }
-
-    var name: String {
-        return comment.name
-    }
-
-    var body: String {
-        return comment.body
     }
 }

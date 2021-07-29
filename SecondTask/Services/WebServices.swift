@@ -52,8 +52,8 @@ class WebServices {
         }.resume()
     }
 
-    func sendSensorData(acceleroDataX: String,acceleroDataY: String,acceleroDataZ: String,
-                        magnetoDataX: String,magnetoDataY: String,magnetoDataZ: String) {
+    func sendSensorData(acceleroDataX: String, acceleroDataY: String, acceleroDataZ: String,
+                        magnetoDataX: String, magnetoDataY: String, magnetoDataZ: String) {
         // Prepare URL
         let url = URL(string: "https://api.thingspeak.com/update?api_key=0R8R3K813KCFV816&field1=\(acceleroDataX)&field2=\(magnetoDataX)&field3=\(acceleroDataY)&field4=\(magnetoDataY)&field5=\(acceleroDataZ)&field6=\(magnetoDataZ)")
         guard let requestUrl = url else { fatalError() }
@@ -76,7 +76,7 @@ class WebServices {
 
             // Convert HTTP Response Data to a String
             if let data = data, let dataString = String(data: data, encoding: .utf8) {
-                print("Response data string:\n \(dataString)")
+                print("Response data string:\n \(dataString) \( Date())")
             }
         }
         task.resume()

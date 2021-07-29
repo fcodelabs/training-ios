@@ -10,11 +10,11 @@ import SwiftUI
 
 struct ViewPostView: View {
     @StateObject var model: SpecificPostVM
-    @StateObject var commentModel: PostListVM
+//    @StateObject var commentModel: PostListVM
 
     init(id: Int) {
         _model = StateObject(wrappedValue: SpecificPostVM(id: id))
-        _commentModel = StateObject(wrappedValue: PostListVM(postId: id))
+//        _commentModel = StateObject(wrappedValue: PostListVM(postId: id))
     }
 
     var body: some View {
@@ -36,7 +36,7 @@ struct ViewPostView: View {
                     .foregroundColor(Color.white)
                     .multilineTextAlignment(.leading)
 
-                List(self.commentModel.commentsVM, id: \.id) { post in
+                List(self.model.commentsVM, id: \.id) { post in
                     VStack {
                         Text(post.name)
                             .font(.title2)
